@@ -211,3 +211,16 @@ gsap.utils.toArray(".service-card").forEach((card, i) => {
     delay: i * 0.05
   });
 });
+
+
+/*Team section CSS */
+
+gsap.to(".team-floating img", {
+  y: -15,
+  rotation: 6,
+  duration: 2,
+  yoyo: true,
+  repeat: -1,
+  ease: "sine.inOut",
+  stagger: 0.2
+});
