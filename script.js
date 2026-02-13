@@ -224,3 +224,30 @@ gsap.to(".team-floating img", {
   ease: "sine.inOut",
   stagger: 0.2
 });
+
+
+/* Conatct section */
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".contact-left", {
+  scrollTrigger: {
+    trigger: ".contact-section",
+    start: "top 75%"
+  },
+  x: -80,
+  opacity: 0,
+  duration: 1,
+  ease: "power3.out"
+});
+
+gsap.from(".contact-right", {
+  scrollTrigger: {
+    trigger: ".contact-section",
+    start: "top 75%"
+  },
+  x: 80,
+  opacity: 0,
+  duration: 1,
+  ease: "power3.out"
+});
