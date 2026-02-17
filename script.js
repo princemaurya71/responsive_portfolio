@@ -63,6 +63,16 @@ const observer = new IntersectionObserver(
 
 sections.forEach(section => observer.observe(section));
 
+//Typing Animation
+
+new Typed(".typing", {
+  strings: [ "Web Designer", "Frontend Developer", "Freelancer"],
+  typeSpeed: 90,
+  backSpeed: 40,
+  backDelay: 1100,
+  loop: true
+});
+
 // Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function (e) {
@@ -276,3 +286,96 @@ gsap.from(".footer-col", {
   duration: 1,
   ease: "power3.out"
 });
+
+
+// Floating particals system
+
+const canvas = document.getElementById("footerParticles");
+const ctx = canvas.getContext("2d");
+
+let particles = [];
+const particleCount = 90;
+
+let mouse = {
+  x: window.innerWidth / 2,
+  y: window.innerHeight / 2
+};
+
+function resizeCanvas() {
+  canvas.width = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+}
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
+window.addEventListener("mousemove", (e) => {
+  const rect = canvas.getBoundingClientRect();
+  mouse.x = e.clientX - rect.left;
+  mouse.y = e.clientY - rect.top;
+});
+
+class Particle {
+  constructor() {
+    this.reset();
+  }
+
+  reset() {
+    this.depth = Math.random(); // 0 (far) → 1 (near)
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.size = 1 + this.depth * 3;
+    this.speedY = 0.2 + this.depth * 1.2;
+    this.opacity = 0.2 + this.depth * 0.6;
+  }
+
+  update() {
+    this.y -= this.speedY;
+
+    if (this.y < 0) {
+      this.y = canvas.height;
+      this.x = Math.random() * canvas.width;
+    }
+  }
+
+  draw() {
+    const parallaxX = (mouse.x - canvas.width / 2) * this.depth * 0.02;
+    const parallaxY = (mouse.y - canvas.height / 2) * this.depth * 0.02;
+
+    ctx.beginPath();
+    ctx.arc(
+      this.x + parallaxX,
+      this.y + parallaxY,
+      this.size,
+      0,
+      Math.PI * 2
+    );
+
+    ctx.fillStyle = `rgba(138, 180, 255, ${this.opacity})`;
+    ctx.shadowBlur = 20 * this.depth;
+    ctx.shadowColor = "#8ab4ff";
+    ctx.fill();
+  }
+}
+
+function initParticles() {
+  particles = [];
+  for (let i = 0; i < particleCount; i++) {
+    particles.push(new Particle());
+  }
+}
+
+function animateParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  particles.forEach((p) => {
+    p.update();
+    p.draw();
+  });
+
+  requestAnimationFrame(animateParticles);
+}
+
+initParticles();
+animateParticles();
+
+

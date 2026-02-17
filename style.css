@@ -1069,4 +1069,25 @@ body.dark .blob {
   }
 }
 
+/* Footer particals animation */
+.footer {
+  position: relative;
+  overflow: hidden;
+}
+
+#footerParticles {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.footer > *:not(canvas) {
+  position: relative;
+  z-index: 2;
+}
+
+
 
