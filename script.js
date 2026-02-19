@@ -89,7 +89,7 @@ const overlay = document.getElementById("menuOverlay");
 
 hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
-  overlay.classList.toggle("active");
+  // overlay.classList.toggle("active");
   if (navMenu.classList.contains("active")) {
     gsap.from("#navMenu li", {
       x: 50,

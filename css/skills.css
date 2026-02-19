@@ -1,0 +1,148 @@
+@font-face {
+  font-family: f1;
+  src: url(fonts/GermaniaOne-Regular.ttf);
+}
+@font-face {
+  font-family: f2;
+  src: url(fonts/UncialAntiqua-Regular.ttf);
+}
+
+@font-face {
+  font-family: f3;
+  src: url(fonts/Gabarito-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: f4;
+  src: url(fonts/Inconsolata-VariableFont_wdth\wght.ttf);
+}
+/* =========================
+   Skills Section
+========================= */
+
+.skills-section {
+  height: 80%;
+  width: 100vw;
+  /* padding: 100px 20px; */
+  background: transparent;
+  color: #ffffff;
+}
+
+.container {
+  padding: 30px 30px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* =========================
+   Section Title
+========================= */
+
+.section-title {
+  font-size: 42px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.section-title span {
+  color: #ff6a3d;
+  font-family: "f1";
+}
+
+.section-subtitle {
+  margin-bottom: 60px;
+  opacity: 0.7;
+  font-size: 16px;
+  font-family: "f3", sans-serif;
+}
+
+/* =========================
+   Grid Layout
+========================= */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* =========================
+   Skill Card
+========================= */
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.6s ease;
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+/* Hover Effect */
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================
+   Icon
+========================= */
+
+.skill-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   Progress Bar
+========================= */
+
+.progress-bar {
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  margin: 20px 0 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background: #ff6a3d;
+  border-radius: 20px;
+  transition: width 1.5s ease-in;
+}
+
+.progress-value {
+  font-weight: 600;
+  color: #ff6a3d;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .skill-card {
+    padding: 25px;
+  }
+}
