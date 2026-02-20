@@ -210,8 +210,8 @@ nav ul li a:hover::after {
   gap: 10px;
   overflow: hidden;
   border-bottom: 1px solid gray;
-  margin-left: 10%;
-  margin-right: 10%;
+  /* margin-left: 5%;
+  margin-right: 10%; */
 }
 
 .hero-text {
@@ -383,8 +383,8 @@ body.dark .blob {
   padding: 40px 10%;
   text-align: center;
   border-bottom: 1px solid gray;
-  margin-left: 10%;
-  margin-right: 10%;
+  /* margin-left: 10%;
+  margin-right: 10%; */
 }
 
 .about-title {
