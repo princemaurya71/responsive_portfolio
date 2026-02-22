@@ -1,0 +1,95 @@
+/* Container */
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  animation: fadeSlideUp 1s ease forwards;
+  opacity: 0;
+}
+
+/* Remove underline */
+.social-icons a {
+  text-decoration: none;
+  width: 45px;
+}
+
+/* Icon Design */
+.social-icons a i {
+  font-size: 22px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f4f4f4;
+  color: #111;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect */
+.social-icons a i:hover {
+  transform: translateY(-6px) scale(1.1);
+  background: #111;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Brand Colors on Hover */
+.social-icons a:nth-child(1) i:hover {
+  background: #1877f2; /* Facebook */
+}
+
+.social-icons a:nth-child(2) i:hover {
+  background: #1da1f2; /* Twitter/X */
+}
+
+.social-icons a:nth-child(3) i:hover {
+  background: #0a66c2; /* LinkedIn */
+}
+
+.social-icons a:nth-child(4) i:hover {
+  background: #e4405f; /* Instagram */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .social-icons {
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .social-icons a i {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icons {
+    gap: 12px;
+  }
+
+  .social-icons a i {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+
+/* Intro Animation */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

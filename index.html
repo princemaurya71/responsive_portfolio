@@ -6,6 +6,9 @@
     <title>Mr.Prince</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/skills.css" />
+    <link rel="stylesheet" href="css/socialicon.css" />
+    <link rel="stylesheet" href="css/cursoranimation.css" />
+    <link rel="stylesheet" href="css/loadinganimation.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="shortcut icon" href="assets\favicon-32x32.png" />
@@ -20,6 +23,40 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   </head>
   <body>
+    <!-- Loading animation -->
+    <div class="preloader">
+      <div class="loader-content">
+        <h1 class="loader-text">WELCOME</h1>
+        <div class="loader-percent">0%</div>
+        <div class="loader-bar">
+          <div class="loader-progress"></div>
+        </div>
+      </div>
+      <div class="bubble-wrapper">
+        <div class="bubble">
+          <img src="assets/IMG_20251216_140829-Photoroom.png" alt="" />
+          <span>Frontend</span>
+        </div>
+
+        <div class="bubble">
+          <img src="assets/ansh.png" alt="" />
+          <span>Backend</span>
+        </div>
+
+        <div class="bubble">
+          <img src="assets/float1.jpg" alt="" />
+          <span>UI/UX</span>
+        </div>
+
+        <div class="bubble">
+          <img src="assets/float2.png" alt="" />
+          <span>AI Dev</span>
+        </div>
+      </div>
+    </div>
+    <!-- Cursor animation -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
     <!-- Navbar -->
     <header class="navbar">
       <div class="menu-overlay" id="menuOverlay"></div>
@@ -64,7 +101,21 @@
           experiences for the web and mobile.
         </p>
         <div class="buttons">
-          <button class="btn">Contact me</button>
+          <button class="btn" id="contactBtn" type="button">Contact me</button>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/prince.maur.908" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://x.com/riyaan_maurya" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/princemaurya71/" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/riyaan_maurya/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
         </div>
       </div>
 
@@ -95,10 +146,7 @@
       <div class="about-images">
         <img src="assets\float1.jpg" class="photo p1" />
         <img src="assets\float2.png" class="photo p2" />
-        <img
-          src="assets/image/protfolio.png"
-          class="photo p3"
-        />
+        <img src="assets/image/protfolio.png" class="photo p3" />
         <!-- <img
           src="assets/image/protfolio.png"
           class="photo p4"
@@ -389,7 +437,9 @@
           <div class="contact-card">
             <div>
               <h4>Email us</h4>
-              <span>yourmail@gmail.com</span>
+              <a href="mailto:mr.prince3650@gmail.com"
+                >mr.prince3650@gmail.com</a
+              >
             </div>
             <button>↗</button>
           </div>
@@ -397,7 +447,7 @@
           <div class="contact-card">
             <div>
               <h4>Call us</h4>
-              <span>(501) 123-4567</span>
+              <a href="tel:+91 9167853886">+91 9167853886</a>
             </div>
             <button>↗</button>
           </div>
@@ -405,7 +455,7 @@
           <div class="contact-card">
             <div>
               <h4>Our location</h4>
-              <span>New York, US</span>
+              <a href="#">Mumbai, Maharashtra</a>
             </div>
             <button>↗</button>
           </div>
@@ -468,10 +518,18 @@
           <p>mr.prince227@gmail.com</p>
 
           <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/prince.maur.908"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://x.com/riyaan_maurya"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/princemaurya71/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="https://www.instagram.com/riyaan_maurya/"
+              ><i class="fab fa-instagram"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -482,5 +540,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
     <script src="js/skills.js"></script>
+    <script src="js/cursorAnimation.js"></script>
+    <script src="js/loadingAnimation.js"></script>
   </body>
 </html>

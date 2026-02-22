@@ -73,6 +73,12 @@ new Typed(".typing", {
   loop: true,
 });
 
+//Add conect section to the button
+document.getElementById("contactBtn")
+  .addEventListener("click", function () {
+    document.getElementById("contact")
+      .scrollIntoView({ behavior: "smooth" });
+  });
 // Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {

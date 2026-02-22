@@ -1,0 +1,49 @@
+/* Hide default cursor */
+body {
+  cursor: none;
+}
+
+/* Inner Dot */
+.cursor-dot {
+  width: 5px;
+  height: 5px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+/* Outer Circle */
+.cursor-outline {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, border 0.3s ease,
+    background 0.3s ease;
+}
+
+/* Hover effect */
+.cursor-hover {
+  width: 25px !important;
+  height: 25px !important;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #ffffff !important;
+}
+
+@media (max-width: 768px) {
+  .cursor-dot,
+  .cursor-outline {
+    display: none;
+  }
+
+  body {
+    cursor: auto;
+  }
+}
