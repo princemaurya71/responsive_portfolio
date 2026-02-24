@@ -655,6 +655,21 @@ body.dark .blob {
     .project-card {
       width: 100%;
     }
+    .project-card {
+      height: auto;
+    }
+
+    .project-card img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-content h3 {
+      margin: 10px 0 5px;
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--text);
+    }
   }
 }
 
@@ -878,6 +893,22 @@ body.dark .blob {
 
   .team-card {
     align-items: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
 
