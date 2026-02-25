@@ -1,5 +1,6 @@
 .brand-section {
   width: 100%;
+  height: 100%;
   overflow: hidden;
   padding: 40px 0;
   background: transparent;
@@ -67,9 +68,12 @@
 /* Responsive */
 @media (max-width: 768px) {
   .brand-track {
-    gap: 14vw;
+    gap: 8vw;
   }
 
+  .brand-track .logo1{
+    gap: 3px;
+  }
   .brand-track .logo1 i {
     font-size: 8vh;
   }
@@ -82,6 +86,13 @@
   right: 0;
   background: transparent;
 }
+
+.brand-wrapper::before,
+.brand-wrapper::after{
+  display: none;
+}
+
+
 }
 
 .brand-wrapper::before,
