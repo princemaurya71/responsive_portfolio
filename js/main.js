@@ -41,6 +41,44 @@ gsap.from(".hero-img img", {
   delay: 1,
 });
 
+// floating certificate animation
+
+gsap.utils.toArray(".certificate").forEach((card) => {
+
+  function randomFloat() {
+    gsap.to(card, {
+      x: gsap.utils.random(-40, 40),
+      y: gsap.utils.random(-40, 40),
+      rotationY: gsap.utils.random(-25, 25),
+      rotationX: gsap.utils.random(-15, 15),
+      duration: gsap.utils.random(1, 4),
+      ease: "sine.inOut",
+      onComplete: randomFloat
+    });
+  }
+
+  randomFloat();
+});
+
+gsap.to(".certificate", {
+  yPercent: -20,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".hero",
+    start: "top top",
+    scrub: true
+  }
+});
+
+document.addEventListener("mousemove", (e) => {
+  gsap.to(".certificate", {
+    x: (e.clientX - window.innerWidth / 2) * 0.01,
+    y: (e.clientY - window.innerHeight / 2) * 0.01,
+    duration: 1,
+    ease: "power2.out"
+  });
+});
+
 //Navbar
 let lastScroll = 0;
 const navbar = document.querySelector(".navbar");

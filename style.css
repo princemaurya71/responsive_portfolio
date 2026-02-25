@@ -122,7 +122,6 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-
 #themeToggle {
   padding-right: 150px;
   background: none;
@@ -131,7 +130,7 @@ nav ul li a:hover::after {
   cursor: pointer;
 }
 
-#themeToggle i{
+#themeToggle i {
   font-size: 25px;
   color: white !important;
 }
@@ -221,6 +220,93 @@ nav ul li a:hover::after {
 }
 
 /* Hero */
+
+/* Hero must have */
+.hero {
+  position: relative;
+  overflow: hidden;
+  perspective: 1200px;
+}
+
+/* Background Layer */
+.achievement-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+
+/* Certificate Card */
+.certificate {
+  position: absolute;
+  width: 220px;
+  transform-style: preserve-3d;
+  will-change: transform;
+  opacity: 0.35;
+}
+
+/* Image styling */
+.certificate img {
+  width: 100%;
+  border-radius: 14px;
+  transform: rotateY(20deg) rotateX(10deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 60px rgba(0, 150, 255, 0.25);
+}
+
+/* Gradient glow behind */
+.certificate::before {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  background: radial-gradient(circle, rgba(0, 150, 255, 0.3), transparent 70%);
+  z-index: -1;
+  filter: blur(60px);
+  opacity: 0.6;
+}
+
+/* Positioning */
+.cert1 {
+  top: 8%;
+  left: 8%;
+}
+.cert2 {
+  top: 75%;
+  left: 18%;
+}
+.cert3 {
+  top: 8%;
+  right: 10%;
+}
+.cert4 {
+  bottom: 15%;
+  right: 8%;
+}
+
+/* Keep content above */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .cert1 {
+    display: none;
+  }
+  .cert2 {
+    top: 60%;
+    left: 5%;
+  }
+  .cert3 {
+    display: none;
+
+    .cert4 {
+      bottom: 20%;
+      right: 6%;
+    }
+  }
+}
+
 .hero {
   margin-top: 10vh;
   min-height: 110vh;
@@ -863,14 +949,14 @@ body.dark .blob {
   color: var(--text);
 }
 
-.team-card h4 a{
+.team-card h4 a {
   text-decoration: none;
   color: rgb(255, 157, 0);
   font-size: 20px;
   padding-top: 5px;
 }
 
-.team-card h4 a:hover{
+.team-card h4 a:hover {
   color: var(--primary);
 }
 
