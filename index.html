@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/loadinganimation.css" />
     <link rel="stylesheet" href="css/gallery.css" />
     <link rel="stylesheet" href="css/brandanimation.css" />
+    <link rel="stylesheet" href="css/stickycard.css" />
+    <link rel="stylesheet" href="css/whatsappBtn.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="shortcut icon" href="assets\favicon-32x32.png" />
@@ -30,7 +32,8 @@
   </head>
   <body>
     <!-- Loading animation -->
-    <div class="preloader">
+
+    <!-- <div class="preloader">
       <div class="loader-content">
         <h1 class="loader-text">WELCOME</h1>
         <div class="loader-percent">0%</div>
@@ -59,7 +62,8 @@
           <span>AI Dev</span>
         </div>
       </div>
-    </div>
+    </div> -->
+
     <!-- Cursor animation -->
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
@@ -271,15 +275,18 @@
           data-title="Crypto Website"
           data-desc="DeFi crypto website built with modern UI."
         >
-          <img
-            src="assets/image/Dashboard.png"
-            alt="Project"
-          />
+          <img src="assets/image/Dashboard.png" alt="Project" />
           <div class="project-content">
             <span class="tag">Data Analysis</span>
             <span class="tag">Dashboard</span>
             <h3>Power BI Dashboard</h3>
-            <p>This project is an interactive Sales Analysis Dashboard created using Microsoft Power BI. It provides a clear view of sales performance, profit trends, customer behavior, and regional performance, helping businesses make data-driven decisions with ease.</p>
+            <p>
+              This project is an interactive Sales Analysis Dashboard created
+              using Microsoft Power BI. It provides a clear view of sales
+              performance, profit trends, customer behavior, and regional
+              performance, helping businesses make data-driven decisions with
+              ease.
+            </p>
           </div>
         </div>
 
@@ -395,6 +402,7 @@
       </div>
     </section>
     <section class="skills-section section" id="skills">
+      <canvas id="particles"></canvas>
       <div class="container">
         <h2 class="section-title">My Work <span>Skills</span></h2>
         <p class="section-subtitle">
@@ -404,7 +412,9 @@
         <div class="skills-grid">
           <!-- Skill Card -->
           <div class="skill-card" data-progress="80">
-            <div class="skill-icon"><img src="assets/image/figma.png" alt="figma"></div>
+            <div class="skill-icon">
+              <img src="assets/image/figma.png" alt="figma" />
+            </div>
             <h3>Figma</h3>
             <div class="progress-bar">
               <div class="progress"></div>
@@ -413,7 +423,9 @@
           </div>
 
           <div class="skill-card" data-progress="75">
-            <div class="skill-icon1"><img src="assets/image/javascript.png" alt="javascript"></div>
+            <div class="skill-icon1">
+              <img src="assets/image/javascript.png" alt="javascript" />
+            </div>
             <h3>JavaScript</h3>
             <div class="progress-bar">
               <div class="progress"></div>
@@ -477,7 +489,87 @@
         </div>
       </div>
     </section>
+    <section class="stack-section">
+      <div class="cards">
+        <div class="card card1">
+          <div class="about-card">
+            <div class="about-container">
+              <div class="about-image">
+                <img src="assets/image/protfolio.png" alt="" />
+              </div>
 
+              <div class="about-content">
+                <span class="badge">ABOUT US</span>
+                <h1>I AM AVAILABLE FOR <span>WEB DEVELOPMENT</span> PROJECT</h1>
+                <p>
+                  Professional designer focused on building high converting
+                  interfaces with clean and modern design principles.
+                </p>
+
+                <div class="stats">
+                  <div class="stat">
+                    <h2 class="counter" data-target="20">0</h2>
+                    <p>Google Review</p>
+                  </div>
+                  <div class="stat">
+                    <h2 class="counter" data-target="6">0</h2>
+                    <p>Month Experience</p>
+                  </div>
+                  <div class="stat">
+                    <h2 class="counter" data-target="2">0</h2>
+                    <p>Award Winning</p>
+                  </div>
+                </div>
+
+                <button class="cta-btn">View details →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card card2">
+          <div class="about-card">
+            <div class="about-container">
+              <div class="about-image">
+                <img src="assets/image/ansh.jpeg" alt="" />
+              </div>
+
+              <div class="about-content">
+                <span class="badge">ABOUT US</span>
+                <h1>I AM AVAILABLE FOR <span>DATA ANALYTICS</span> PROJECT</h1>
+                <p>
+                  I transform raw data into meaningful insights using Python,
+                  SQL, Power BI and Excel to drive business decisions.
+                </p>
+
+                <div class="stats">
+                  <div class="stat">
+                    <h2 class="counter" data-target="5">0</h2>
+                    <p>Google Review</p>
+                  </div>
+                  <div class="stat">
+                    <h2 class="counter" data-target="1">0</h2>
+                    <p>Year Experience</p>
+                  </div>
+                  <div class="stat">
+                    <h2 class="counter" data-target="2">0</h2>
+                    <p>Award Winning</p>
+                  </div>
+                </div>
+
+                <button class="cta-btn">View details →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card3">
+          <div class="content">
+            <h1>Coming Soon.....🧐</h1>
+            <!-- <p>Build real world production ready applications</p> -->
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="section team" id="team">
       <h2 class="section-title">Meet our Team</h2>
       <p class="section-subtitle">
@@ -564,10 +656,19 @@
             <img src="assets/image/protfolio.png" alt="" />
             <p>Gallery Photo</p>
           </div>
+
+          <div class="gallery-card">
+            <img src="assets/image/img5.jpeg" alt="" />
+            <p>Gallery Photo</p>
+          </div>
+
+          <div class="gallery-card">
+            <img src="assets/image/img6.jpg" alt="" />
+            <p>Gallery Photo</p>
+          </div>
         </div>
       </div>
     </section>
-
     <section class="contact-section section" id="contact">
       <!-- Background Text -->
       <h1 class="bg-text">CONTACT</h1>
@@ -620,6 +721,37 @@
         </div>
       </div>
     </section>
+
+    <div class="whatsapp-widget">
+      <button class="whatsapp-btn" id="chatToggle">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Chat with us</span>
+      </button>
+
+      <div class="chat-box" id="chatBox">
+        <div class="chat-header">
+          WhatsApp Chat
+          <span id="closeChat">✕</span>
+        </div>
+
+        <div class="chat-body">
+          <p class="chat-msg">Hi 👋<br />How can we help you?</p>
+
+          <button class="quick-msg" data-msg="I want to build a website">
+            Build a Website
+          </button>
+
+          <button class="quick-msg" data-msg="I want to create an AI chatbot">
+            AI Chatbot
+          </button>
+
+          <button class="quick-msg" data-msg="Tell me about your services">
+            Your Services
+          </button>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer">
       <canvas id="footerParticles"></canvas>
       <!-- CTA SECTION -->
@@ -695,5 +827,7 @@
     <script src="js/loadingAnimation.js"></script>
     <script src="js/galleryAnimation.js"></script>
     <script src="js/brandAnimation.js"></script>
+    <script src="js/stickyCard.js"></script>
+    <script src="js/whatsappBtn.js"></script>
   </body>
 </html>
