@@ -1,179 +1,175 @@
-
-.feedback-section{
-padding:5px 5%;
+.feedback-section {
+  width: 100vw;
+  overflow-x: hidden;
+  padding: 5px 5%;
 }
 
-.section-title{
-text-align:center;
-font-size:40px;
-margin-bottom:60px;
+.section-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 60px;
 }
 
-.row{
-display:flex;
-gap:30px;
-margin-bottom:40px;
+.row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
-.f-card{
-min-width:350px;
-background:transparent;
-padding:25px;
-border-radius:15px;
-transition:all 0.35s ease;
-cursor:pointer;
-border:1px solid rgba(255, 255, 255, 0.214);
+.f-card {
+  min-width: 350px;
+  background: transparent;
+  padding: 25px;
+  border-radius: 15px;
+  transition: all 0.35s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.214);
 }
 
-.profile{
-display:flex;
-align-items:center;
-gap:15px;
-margin-bottom:15px;
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
 }
 
-.profile img{
-width:50px;
-height:50px;
-border-radius:50%;
+.profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
-.profile h4{
-margin:0;
-font-size:16px;
+.profile h4 {
+  margin: 0;
+  font-size: 16px;
 }
 
-.profile p{
-margin:0;
-font-size:12px;
-opacity:0.7;
+.profile p {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.7;
 }
 
-.rating{
-color:gold;
-margin-bottom:10px;
+.rating {
+  color: gold;
+  margin-bottom: 10px;
 }
 
-.review{
-font-size:14px;
-line-height:1.5;
-opacity:0.9;
+.review {
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.9;
 }
 
 /* Hover Glow */
 
-.f-card:hover{
-transform:translateY(-15px);
-box-shadow:0 0 25px rgba(124, 124, 124, 0.4);
+.f-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 0 25px rgba(124, 124, 124, 0.4);
 }
 
 /* Active Card */
 
-.f-card.active{
-box-shadow:0 0 35px rgba(0, 0, 0, 0.9);
-transform:scale(1.05);
+.f-card.active {
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.9);
+  transform: scale(1.05);
 }
 
 /* Blur Others */
 
-.blur{
-filter:blur(4px);
-opacity:0.4;
+.blur {
+  filter: blur(4px);
+  opacity: 0.4;
 }
-
 
 /* Blur all cards when hovering inside row */
 
-.row:hover .f-card{
-filter:blur(4px);
-opacity:0.4;
-transition:0.3s ease;
+.row:hover .f-card {
+  filter: blur(4px);
+  opacity: 0.4;
+  transition: 0.3s ease;
 }
 
 /* Keep hovered card clear */
 
-.row .f-card:hover{
-filter:blur(0);
-opacity:1;
-transform:scale(1.05);
-box-shadow:0 0 35px rgba(0, 0, 0, 0.8);
-z-index:2;
+.row .f-card:hover {
+  filter: blur(0);
+  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
+  z-index: 2;
 }
 
 /* 3D perspective for cards */
 
-.row{
-perspective:1000px;
+.row {
+  perspective: 1000px;
 }
 
-.f-card{
-transform-style:preserve-3d;
-transition:transform 0.2s ease;
-will-change:transform;
+.f-card {
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease;
+  will-change: transform;
 }
 
-.f-card:hover{
-box-shadow:
-0 15px 40px rgba(0,0,0,0.6),
-0 0 25px rgba(255,80,80,0.6);
+.f-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 80, 80, 0.6);
 }
 
 /* Responsive */
-@media(max-width:768px){
-
-.f-card{
-min-width:260px;
-max-width:260px;
-}
-
+@media (max-width: 768px) {
+  .f-card {
+    min-width: 260px;
+    max-width: 260px;
+  }
 }
 
 /* Small mobile */
 
-@media(max-width:480px){
+@media (max-width: 480px) {
+  .f-card {
+    min-width: 220px;
+    max-width: 220px;
+    padding: 18px;
+  }
 
-.f-card{
-min-width:220px;
-max-width:220px;
-padding:18px;
+  .profile img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .review {
+    font-size: 13px;
+  }
 }
 
-.profile img{
-width:40px;
-height:40px;
-}
-
-.review{
-font-size:13px;
-}
-
-}
-
-
-
-.f-card{
-position:relative;
-overflow:hidden;
+.f-card {
+  position: relative;
+  overflow: hidden;
 }
 
 /* spotlight layer */
 
-.f-card::before{
-content:"";
-position:absolute;
-width:250px;
-height:250px;
-background:radial-gradient(circle, rgba(255, 255, 255, 0.241), transparent 60%);
-top:var(--y);
-left:var(--x);
-transform:translate(-50%,-50%);
-pointer-events:none;
-opacity:0;
-transition:opacity 0.3s;
+.f-card::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.241),
+    transparent 60%
+  );
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 /* show spotlight on hover */
 
-.f-card:hover::before{
-opacity:1;
+.f-card:hover::before {
+  opacity: 1;
 }

@@ -7,7 +7,7 @@ document.querySelectorAll(".row").forEach((row) => {
 
 /* Detect screen width */
 
-let speed = window.innerWidth < 768 ? 60 : 10;
+let speed = window.innerWidth < 768 ? 5 : 10;
 
 /* Row 1 animation */
 

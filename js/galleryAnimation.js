@@ -2,7 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const track = document.querySelector(".horizontal-track");
 
-let totalWidth = track.scrollWidth - window.innerWidth + 100;
+let totalWidth = track.scrollWidth - window.innerWidth + 70;
 
 gsap.to(track, {
   x: -totalWidth,

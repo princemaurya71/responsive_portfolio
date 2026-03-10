@@ -661,6 +661,7 @@ body.dark .blob {
   font-family: "f4";
   font-weight: 500;
   font-size: 25px;
+  
 }
 
 .projects-grid {
@@ -884,17 +885,17 @@ body.dark .blob {
 }
 
 .section-title {
-  font-family: "f1";
+  font-family: "f2" !important;
   color: var(--text);
-  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-size: clamp(2rem, 4vw, 3rem);
 }
 
 .section-subtitle {
-  font-family: "f3" !important;
   font-size: 22px !important;
   max-width: 600px;
   margin: 12px auto 80px;
   color: var(--text);
+  padding-bottom: 15px;
 }
 
 /* Floating avatars */
